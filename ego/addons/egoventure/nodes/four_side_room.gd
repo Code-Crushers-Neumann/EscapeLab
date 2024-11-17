@@ -183,3 +183,6 @@ func _on_Left_activate():
 		VIEW_LEFT: _set_current_view(VIEW_BACK)
 		VIEW_BACK: _set_current_view(VIEW_RIGHT)
 		VIEW_RIGHT: _set_current_view(VIEW_FRONT)
+
+
+

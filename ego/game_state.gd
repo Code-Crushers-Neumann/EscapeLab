@@ -8,3 +8,7 @@ extends BaseState
 
 ## The player has taken the keys
 #export(bool) var has_keys = false
+export(bool) var tutorial_seen_door = false
+export(bool) var tutorial_seen_rightside = false
+export(bool) var tutorial_has_note = false
+export(bool) var tutorial_unlocked_door = false

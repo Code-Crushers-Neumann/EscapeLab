@@ -26,7 +26,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 # Triggered when a new game is started.
 func _on_new_game():
 	_initialization()
-	EgoVenture.change_scene("res://scenes/Test/test.tscn")
+	EgoVenture.change_scene("res://scenes/level_tutorial/level_tutorial.tscn")
 	# Should call an introduction sequence
 	#EgoVenture.change_scene("res://scenes/intro.tscn")
 

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=7 format=2]
+
+[ext_resource path="res://addons/parrot/resources/dialog_line_resource.gd" type="Script" id=1]
+[ext_resource path="res://addons/parrot/resources/dialog_resource.gd" type="Script" id=2]
+[ext_resource path="res://characters/mate.tres" type="Resource" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+character = ExtResource( 3 )
+text = "Próbáljunk kijutni ebből a teszt szobából. Előttünk van az ajtó, vajon mi nyithatja ki..."
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+character = ExtResource( 3 )
+text = "Lehet az a billentyűzet az ajtó mellett. Csak mi lehet a kódja..."
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 1 )
+character = ExtResource( 3 )
+text = "Nézzünk körül a szobában, valahol csak itt kell lennie."
+
+[resource]
+script = ExtResource( 2 )
+lines = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]

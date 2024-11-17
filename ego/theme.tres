@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=29 format=2]
+[gd_resource type="Theme" load_steps=30 format=2]
 
 [ext_resource path="res://misc/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -80,6 +80,9 @@ use_filter = true
 extra_spacing_top = 10
 extra_spacing_bottom = 10
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 0.501961 )
 
 [sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0, 0, 0, 1 )
@@ -179,14 +182,14 @@ Label/fonts/goals = SubResource( 14 )
 Label/fonts/hints = SubResource( 15 )
 Label/fonts/saveslots_date = SubResource( 16 )
 Panel/styles/detail_view = null
-Panel/styles/dialog_panel = null
+Panel/styles/dialog_panel = SubResource( 28 )
 Panel/styles/inventory_panel = SubResource( 17 )
 Panel/styles/notepad_panel = SubResource( 18 )
 Panel/styles/saveslot_panel = SubResource( 19 )
 ProgressBar/styles/bg = SubResource( 20 )
 ProgressBar/styles/fg = SubResource( 23 )
 RichTextLabel/colors/dialog_hotspot_asked_font_color = Color( 0.439216, 0.439216, 0.439216, 1 )
-RichTextLabel/colors/dialog_hotspot_font_color = Color( 0, 0, 0, 1 )
+RichTextLabel/colors/dialog_hotspot_font_color = Color( 0.623529, 0.0901961, 0.0901961, 1 )
 RichTextLabel/colors/dialog_hotspot_hover_font_color = Color( 0.133333, 0.470588, 0.490196, 1 )
 RichTextLabel/fonts/dialog_font = SubResource( 24 )
 RichTextLabel/fonts/dialog_hotspot_bold_font = SubResource( 27 )
