@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=8 format=2]
 
 [ext_resource path="res://addons/parrot/resources/dialog_line_resource.gd" type="Script" id=1]
 [ext_resource path="res://addons/parrot/resources/dialog_resource.gd" type="Script" id=2]
@@ -19,6 +19,11 @@ script = ExtResource( 1 )
 character = ExtResource( 3 )
 text = "Nézzünk körül a szobában, valahol csak itt kell lennie."
 
+[sub_resource type="Resource" id=4]
+script = ExtResource( 1 )
+character = ExtResource( 3 )
+text = "Tipp: nyomj a szem ikonra hogy lásd hogy mivel tudsz csinálni valamit."
+
 [resource]
 script = ExtResource( 2 )
-lines = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ]
+lines = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

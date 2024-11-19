@@ -27,13 +27,15 @@ func _ready():
 
 func _on_Room_view_changed(old_view, new_view):
 	if(new_view == "right" && tutorial_has_note == false):
+		get_node("Note").disabled = true
 		Parrot.skip_enabled = false
 		get_node("Room").enable_navigation = false
 		Parrot.play(preload("res://dialogs/tutorial_right_first.tres"))
 		yield(get_tree().create_timer(9), "timeout")
+		get_node("Note").disabled = false
 		get_node("Room").enable_navigation = true
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == false):
-		pass
+		Parrot.play(preload("res://dialogs/tutorial_front_no_note.tres"))
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == true):
 		Parrot.play(preload("res://dialogs/tutorial_front_has_note.tres"))
 
@@ -46,7 +48,10 @@ func _on_Hotspot_activate():
 
 func _on_TriggerHotspot_item_used(item):
 	if(item.title == "note"):
-		printerr("SIKER")
+		get_node("ajto").queue_free()
+		get_node("opened").visible = true
+		get_node("WalkHotspot").visible = true
+		get_node("WalkHotspot").disabled = false
 
 
 func _on_TriggerHotspot_pressed():
