@@ -11,6 +11,7 @@ var tutorial_unlocked_door = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Inventory.enable()
 	get_node("Room").enable_navigation = false
 	Parrot.play(preload("res://dialogs/tutorial_front_first.tres"))
 	Parrot.skip_enabled = false
@@ -29,7 +30,9 @@ func _on_Room_view_changed(old_view, new_view):
 		Parrot.skip_enabled = false
 		get_node("Room").enable_navigation = false
 		Parrot.play(preload("res://dialogs/tutorial_right_first.tres"))
+		yield(get_tree().create_timer(9), "timeout")
+		get_node("Room").enable_navigation = true
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == false):
 		pass
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == true):
-		pass
+		Parrot.play(preload("res://dialogs/tutorial_front_has_note.tres"))
