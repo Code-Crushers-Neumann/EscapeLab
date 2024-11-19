@@ -36,3 +36,18 @@ func _on_Room_view_changed(old_view, new_view):
 		pass
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == true):
 		Parrot.play(preload("res://dialogs/tutorial_front_has_note.tres"))
+
+
+func _on_Hotspot_activate():
+	Inventory.add_item(preload("res://inventory/tutorial_note.tres"))
+	tutorial_has_note = true
+	get_node("%Note").queue_free()
+
+
+func _on_TriggerHotspot_item_used(item):
+	if(item.title == "note"):
+		printerr("SIKER")
+
+
+func _on_TriggerHotspot_pressed():
+	printerr("gomb")

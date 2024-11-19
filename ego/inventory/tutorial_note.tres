@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://addons/egoventure/resources/inventory_item.gd" type="Script" id=1]
+[ext_resource path="res://images/items/tutorial/note.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+title = "note"
+description = "sajt"
+image_normal = ExtResource( 2 )
+image_active = ExtResource( 2 )
+image_big = ExtResource( 2 )
+combineable_with = [  ]
+detail_scene = ""
+detail_show_mouse = false
+grabbable = true
