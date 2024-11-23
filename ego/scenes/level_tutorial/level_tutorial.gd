@@ -55,7 +55,6 @@ func _on_TriggerHotspot_item_used(item):
 		get_node("opened").visible = true
 		get_node("WalkHotspot").visible = true
 		get_node("WalkHotspot").disabled = false
-	elif(item.title == "note"):
 		Parrot.play(preload("res://dialogs/tutorial_unequip.tres"))
 
 func _on_TriggerHotspot_pressed():
