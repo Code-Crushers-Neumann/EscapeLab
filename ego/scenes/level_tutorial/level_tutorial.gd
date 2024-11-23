@@ -15,8 +15,10 @@ func _ready():
 	get_node("Room").enable_navigation = false
 	Parrot.play(preload("res://dialogs/tutorial_front_first.tres"))
 	Parrot.skip_enabled = false
+	get_node("ajto").disabled = true
 	yield(get_tree().create_timer(17), "timeout")
 	get_node("Room").enable_navigation = true
+	get_node("ajto").disabled = false
 	tutorial_seen_door = true
 	Parrot.skip_enabled = true
 
@@ -47,12 +49,20 @@ func _on_Hotspot_activate():
 
 
 func _on_TriggerHotspot_item_used(item):
-	if(item.title == "note"):
+	if(item.title == "note" && tutorial_unlocked_door == false):
+		tutorial_unlocked_door = true
 		get_node("ajto").queue_free()
 		get_node("opened").visible = true
 		get_node("WalkHotspot").visible = true
 		get_node("WalkHotspot").disabled = false
-
+	elif(item.title == "note"):
+		Parrot.play(preload("res://dialogs/tutorial_unequip.tres"))
 
 func _on_TriggerHotspot_pressed():
-	printerr("gomb")
+	yield(get_tree().create_timer(0.2), "timeout")
+	if(!tutorial_unlocked_door):
+		Parrot.play(preload("res://dialogs/no_code.tres"))
+
+
+func _on_WalkHotspot_activate():
+	EgoVenture.change_scene("res://scenes/level_tutorial/success.tscn")

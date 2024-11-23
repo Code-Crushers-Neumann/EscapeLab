@@ -60,6 +60,7 @@ visible = false
 position = Vector2( 960, -540 )
 texture = ExtResource( 12 )
 
+[connection signal="activate" from="WalkHotspot" to="." method="_on_WalkHotspot_activate"]
 [connection signal="view_changed" from="Room" to="." method="_on_Room_view_changed"]
 [connection signal="activate" from="Note" to="." method="_on_Hotspot_activate"]
 [connection signal="item_used" from="ajto" to="." method="_on_TriggerHotspot_item_used"]
