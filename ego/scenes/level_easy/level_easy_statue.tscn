@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=1]
+[ext_resource path="res://images/level_easy/level_easy_statue_close.png" type="Texture" id=2]
+
+[node name="level_easy_statue" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="WalkHotspot" type="TextureButton" parent="."]
+margin_top = 837.0
+margin_right = 1916.0
+margin_bottom = 1062.0
+mouse_default_cursor_shape = 6
+script = ExtResource( 1 )
+cursor_type = 2
+target_scene = "res://scenes/level_easy/level_easy.tscn"
+target_view = "front"
