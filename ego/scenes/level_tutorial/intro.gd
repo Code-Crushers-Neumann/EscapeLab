@@ -14,7 +14,7 @@ func _ready():
 	yield(get_tree().create_timer(17), "timeout")
 	Parrot.skip_enabled = true
 	EgoVenture.change_scene("res://scenes/level_tutorial/level_tutorial.tscn")
-
+	EgoVenture.game_started = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

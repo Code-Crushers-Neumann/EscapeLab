@@ -12,15 +12,16 @@ var tutorial_unlocked_door = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Inventory.enable()
-	get_node("Room").enable_navigation = false
-	Parrot.play(preload("res://dialogs/tutorial_front_first.tres"))
-	Parrot.skip_enabled = false
-	get_node("ajto").disabled = true
-	yield(get_tree().create_timer(17), "timeout")
-	get_node("Room").enable_navigation = true
-	get_node("ajto").disabled = false
-	tutorial_seen_door = true
-	Parrot.skip_enabled = true
+	if ((EgoVenture.state as GameState).tutorial_seen_door != true):
+		get_node("Room").enable_navigation = false
+		Parrot.play(preload("res://dialogs/tutorial_front_first.tres"))
+		Parrot.skip_enabled = false
+		get_node("ajto").disabled = true
+		yield(get_tree().create_timer(17), "timeout")
+		get_node("Room").enable_navigation = true
+		get_node("ajto").disabled = false
+		Parrot.skip_enabled = true
+	(EgoVenture.state as GameState).tutorial_seen_door = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,6 +46,7 @@ func _on_Room_view_changed(old_view, new_view):
 func _on_Hotspot_activate():
 	Inventory.add_item(preload("res://inventory/tutorial_note.tres"))
 	tutorial_has_note = true
+	(EgoVenture.state as GameState).tutorial_has_note = true
 	get_node("%Note").queue_free()
 
 

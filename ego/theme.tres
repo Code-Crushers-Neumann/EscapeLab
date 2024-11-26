@@ -142,7 +142,7 @@ extra_spacing_bottom = 10
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.156863, 0.00784314, 0.00784314, 1 )
+bg_color = Color( 0.00784314, 0.0745098, 0.156863, 1 )
 
 [resource]
 default_font = SubResource( 27 )
@@ -173,10 +173,10 @@ HSlider/icons/tick = SubResource( 9 )
 HSlider/styles/grabber_area = SubResource( 10 )
 HSlider/styles/grabber_area_highlight = SubResource( 11 )
 HSlider/styles/slider = SubResource( 12 )
-Label/colors/detail_view_font_color = Color( 0, 0, 0, 1 )
-Label/colors/font_color = Color( 0, 0, 0, 1 )
-Label/colors/goals = Color( 0, 0, 0, 1 )
-Label/colors/hints = Color( 0, 0, 0, 1 )
+Label/colors/detail_view_font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color = Color( 0.835294, 0.835294, 0.835294, 1 )
+Label/colors/goals = Color( 1, 0, 0, 1 )
+Label/colors/hints = Color( 1, 0, 0, 1 )
 Label/fonts/detail_view = SubResource( 13 )
 Label/fonts/goals = SubResource( 14 )
 Label/fonts/hints = SubResource( 15 )

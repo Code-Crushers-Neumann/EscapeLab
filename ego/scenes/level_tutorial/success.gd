@@ -13,7 +13,7 @@ func _ready():
 	yield(get_tree().create_timer(4), "timeout")
 	Inventory.remove_item(preload("res://inventory/tutorial_note.tres"))
 	Inventory.disable()
-
+	EgoVenture.save_continue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

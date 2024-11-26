@@ -200,7 +200,7 @@ func toggle():
 			Speedy.hidden = false
 		
 		$Menu.visible = !$Menu.visible
-		
+		EgoVenture.save_continue()
 		var target_shape = Input.CURSOR_ARROW
 		var mousePos = get_viewport().get_mouse_position() + offset
 
