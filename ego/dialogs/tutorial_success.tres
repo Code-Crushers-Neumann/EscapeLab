@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 character = ExtResource( 3 )
-text = "Ezaz sikerült! Gratulálok, fel vettünk téged."
+text = "Ezaz sikerült! Gratulálok, felvettünk téged."
 
 [resource]
 script = ExtResource( 1 )

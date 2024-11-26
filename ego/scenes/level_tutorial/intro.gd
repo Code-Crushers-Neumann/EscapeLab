@@ -10,7 +10,9 @@ extends Node2D
 func _ready():
 	yield(get_tree().create_timer(2), "timeout")
 	Parrot.play(preload("res://dialogs/intro.tres"))
+	Parrot.skip_enabled = false
 	yield(get_tree().create_timer(17), "timeout")
+	Parrot.skip_enabled = true
 	EgoVenture.change_scene("res://scenes/level_tutorial/level_tutorial.tscn")
 
 
