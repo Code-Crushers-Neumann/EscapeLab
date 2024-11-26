@@ -119,7 +119,7 @@ func show():
 		$Control/Goals.text = ""
 		$Control/Hints.text = ""
 		_hints_shown = true
-	$Control.show()
+	#$Control.show()
 
 
 # Get the goal by id
