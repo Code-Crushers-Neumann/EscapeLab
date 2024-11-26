@@ -150,7 +150,7 @@ custom_styles/pressed = SubResource( 6 )
 custom_styles/focus = SubResource( 18 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 6 )
-text = "MENU_CONTINUE"
+text = "Folytatás"
 script = ExtResource( 3 )
 
 [node name="Resume" type="Button" parent="Menu/MainMenu/Margin/VBox/MenuItems"]
@@ -165,7 +165,7 @@ custom_styles/pressed = SubResource( 6 )
 custom_styles/focus = SubResource( 19 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 6 )
-text = "MENU_RESUME"
+text = "Folytatás"
 script = ExtResource( 3 )
 
 [node name="NewGame" type="Button" parent="Menu/MainMenu/Margin/VBox/MenuItems"]
@@ -180,7 +180,7 @@ custom_styles/pressed = SubResource( 6 )
 custom_styles/focus = SubResource( 20 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 6 )
-text = "MENU_NEW"
+text = "Új játék"
 script = ExtResource( 3 )
 
 [node name="Load" type="Button" parent="Menu/MainMenu/Margin/VBox/MenuItems"]
@@ -243,7 +243,7 @@ custom_styles/pressed = SubResource( 6 )
 custom_styles/focus = SubResource( 24 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 6 )
-text = "MENU_QUIT"
+text = "Kilépés"
 script = ExtResource( 3 )
 
 [node name="Spacer" type="Control" parent="Menu/MainMenu/Margin/VBox"]

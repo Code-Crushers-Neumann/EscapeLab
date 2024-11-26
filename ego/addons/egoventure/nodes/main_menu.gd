@@ -228,7 +228,7 @@ func toggle():
 				EgoVenture.in_game_configuration.fullscreen
 			Speedy.set_shape(Input.CURSOR_ARROW)
 			if EgoVenture.is_touch:
-				$Menu/MainMenu/Margin/VBox/MenuItems/Quit.hide()
+				#$Menu/MainMenu/Margin/VBox/MenuItems/Quit.hide()
 				$Menu/Options/CenterContainer/VBox/Grid/Fullscreen.hide()
 				$Menu/Options/CenterContainer/VBox/Grid/FullscreenLabel.hide()
 
