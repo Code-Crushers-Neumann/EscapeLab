@@ -50,6 +50,7 @@ var _mouse_was_hidden: bool = false
 # Default to hiding the menu
 func _ready():
 	EgoVenture.connect("game_loaded", self, "toggle")
+	
 
 
 # Hide everything upon startup

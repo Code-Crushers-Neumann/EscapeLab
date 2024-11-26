@@ -12,3 +12,4 @@ export(bool) var tutorial_seen_door = false
 export(bool) var tutorial_seen_rightside = false
 export(bool) var tutorial_has_note = false
 export(bool) var tutorial_unlocked_door = false
+export(bool) var tutorial_done = false
