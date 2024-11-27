@@ -21,6 +21,11 @@ func _ready():
 		get_node("Room").enable_navigation = true
 		get_node("ajto").disabled = false
 		Parrot.skip_enabled = true
+		tutorial_seen_door = true
+	else:
+		tutorial_seen_door = true
+	if((EgoVenture.state as GameState).tutorial_has_note):
+		tutorial_has_note = true
 	(EgoVenture.state as GameState).tutorial_seen_door = true
 
 
