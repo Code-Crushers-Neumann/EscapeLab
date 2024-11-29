@@ -20,7 +20,14 @@ func _ready():
 # - item1: First item
 # - item2: Second item
 func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
-	pass
+	match item1.title:
+		"Szám":
+			if item2.title == "Kódolt Üzenet":
+				EgoVenture.change_scene("res://scenes/level_selector.tscn")
+	match item1.title:
+		"Kódolt Üzenet":
+			if item2.title == "Szám":
+				EgoVenture.change_scene("res://scenes/level_selector.tscn")	
 
 
 # Triggered when a new game is started.

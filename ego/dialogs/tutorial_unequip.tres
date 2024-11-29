@@ -1,8 +1,7 @@
-[gd_resource type="Resource" load_steps=7 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://addons/parrot/resources/dialog_resource.gd" type="Script" id=1]
 [ext_resource path="res://addons/parrot/resources/dialog_line_resource.gd" type="Script" id=2]
-[ext_resource path="res://characters/player.tres" type="Resource" id=3]
 [ext_resource path="res://characters/mate.tres" type="Resource" id=4]
 
 [sub_resource type="Resource" id=1]
@@ -10,11 +9,6 @@ script = ExtResource( 2 )
 character = ExtResource( 4 )
 text = "Remek! Most már menjünk ki hogy kész legyünk."
 
-[sub_resource type="Resource" id=2]
-script = ExtResource( 2 )
-character = ExtResource( 3 )
-text = "Kattints a cetlire megint hogy eltedd, és nyomj megint az ajtóra."
-
 [resource]
 script = ExtResource( 1 )
-lines = [ SubResource( 1 ), SubResource( 2 ) ]
+lines = [ SubResource( 1 ) ]

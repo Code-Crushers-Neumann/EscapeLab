@@ -13,3 +13,6 @@ export(bool) var tutorial_seen_rightside = false
 export(bool) var tutorial_has_note = false
 export(bool) var tutorial_unlocked_door = false
 export(bool) var tutorial_done = false
+export(bool) var easy_has_coded_message = false
+export(bool) var easy_has_number_code = false
+export(bool) var easy_done = false

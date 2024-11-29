@@ -23,7 +23,7 @@ text = "Nézzünk körül a szobában, valahol csak itt kell lennie."
 [sub_resource type="Resource" id=4]
 script = ExtResource( 1 )
 character = ExtResource( 4 )
-text = "Tipp: nyomj a szem ikonra hogy lásd hogy mivel tudsz csinálni valamit."
+text = "Tipp: Tartsd nyomva a szem ikonra hogy lásd hogy mivel tudsz csinálni valamit."
 
 [resource]
 script = ExtResource( 2 )

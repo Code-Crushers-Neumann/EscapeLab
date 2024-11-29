@@ -54,23 +54,23 @@ func _on_panel_gui_input(event: InputEvent):
 #
 # - item: The inventory item to display
 func show_with_item(item: InventoryItem):
-	self._item = item
-	$Panel/VBox/Description.text = item.description
-	if item.detail_scene == '':
-		$Panel/VBox/Image.texture = item.image_big
-		$Panel.mouse_filter = Control.MOUSE_FILTER_STOP
-	else:
-		$Panel/VBox/DetailScene.add_child(load(item.detail_scene).instance())
-		$Panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	if not item.detail_show_mouse:
-		Speedy.hidden = true
-	$Panel.show()
-	is_visible = true
-	if EgoVenture.is_touch:
-		Inventory.release_item()
-	if not EgoVenture.is_touch and Inventory.activated:
-		Inventory.toggle_inventory()
-
+#	self._item = item
+#	$Panel/VBox/Description.text = item.description
+#	if item.detail_scene == '':
+#		$Panel/VBox/Image.texture = item.image_big
+#		$Panel.mouse_filter = Control.MOUSE_FILTER_STOP
+#	else:
+#		$Panel/VBox/DetailScene.add_child(load(item.detail_scene).instance())
+#		$Panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+#	if not item.detail_show_mouse:
+#		Speedy.hidden = true
+#	$Panel.show()
+#	is_visible = true
+#	if EgoVenture.is_touch:
+#		Inventory.release_item()
+#	if not EgoVenture.is_touch and Inventory.activated:
+#		Inventory.toggle_inventory()
+	pass
 
 # Hide the panel
 func hide():

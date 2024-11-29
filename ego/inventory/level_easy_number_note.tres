@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://addons/egoventure/resources/inventory_item.gd" type="Script" id=1]
+[ext_resource path="res://inventory/level_easy_coded_message.tres" type="Resource" id=2]
+[ext_resource path="res://images/items/level_easy/number_normal.png" type="Texture" id=3]
+[ext_resource path="res://images/items/level_easy/number_active.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+title = "Szám"
+description = "Egy szám"
+image_normal = ExtResource( 3 )
+image_active = ExtResource( 4 )
+combineable_with = [ ExtResource( 2 ) ]
+detail_scene = ""
+detail_show_mouse = false
+grabbable = true
