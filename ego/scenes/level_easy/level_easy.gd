@@ -15,5 +15,7 @@ func _ready():
 #		Inventory.add_item(preload("res://inventory/level_easy_number_note.tres"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):8
-#	pass
+func _process(delta):
+	if((EgoVenture.state as GameState).easy_flag && !get_node("FlagHotspot").visible):
+		get_node("FlagHotspot").visible = true
+		get_node("FlagHotspot").disabled = false

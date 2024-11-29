@@ -16,3 +16,4 @@ export(bool) var tutorial_done = false
 export(bool) var easy_has_coded_message = false
 export(bool) var easy_has_number_code = false
 export(bool) var easy_done = false
+export(bool) var easy_flag = false
