@@ -23,11 +23,15 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 	match item1.title:
 		"Szám":
 			if item2.title == "Kódolt Üzenet":
-				EgoVenture.change_scene("res://scenes/level_selector.tscn")
+				Inventory.remove_item(preload("res://inventory/level_easy_coded_message.tres"))
+				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
+				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
 	match item1.title:
 		"Kódolt Üzenet":
 			if item2.title == "Szám":
-				EgoVenture.change_scene("res://scenes/level_selector.tscn")	
+				Inventory.remove_item(preload("res://inventory/level_easy_coded_message.tres"))
+				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
+				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
 
 
 # Triggered when a new game is started.
