@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/egoventure/nodes/four_side_room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/level_medium/level_medium2_back.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://images/items/level_medium/cutout_normal.png" type="Texture" id=9]
 [ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=10]
 [ext_resource path="res://scenes/level_medium/level_medium2.gd" type="Script" id=11]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=12]
 
 [node name="level_medium2" type="Node2D"]
 script = ExtResource( 11 )
@@ -22,14 +23,14 @@ back_texture = ExtResource( 2 )
 left_texture = ExtResource( 3 )
 
 [node name="Research" type="Sprite" parent="."]
-position = Vector2( 2310, 402 )
-scale = Vector2( 2.82031, 2.82031 )
+position = Vector2( 2361, 466 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 centered = false
 
 [node name="NatoMessage" type="Sprite" parent="."]
-position = Vector2( 2903, 390 )
-scale = Vector2( 2.82, 2.82 )
+position = Vector2( 2916, 445 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 7 )
 centered = false
 
@@ -46,19 +47,19 @@ texture = ExtResource( 9 )
 centered = false
 
 [node name="ResearchHotspot" type="TextureButton" parent="."]
-margin_left = 2335.0
-margin_top = 403.0
-margin_right = 2638.0
-margin_bottom = 752.0
+margin_left = 2373.0
+margin_top = 459.0
+margin_right = 2621.0
+margin_bottom = 745.0
 mouse_default_cursor_shape = 13
 script = ExtResource( 10 )
 cursor_type = 12
 
 [node name="NatoMessageHotspot" type="TextureButton" parent="."]
-margin_left = 2933.0
-margin_top = 407.0
-margin_right = 3236.0
-margin_bottom = 723.0
+margin_left = 2899.0
+margin_top = 412.0
+margin_right = 3202.0
+margin_bottom = 728.0
 mouse_default_cursor_shape = 13
 script = ExtResource( 10 )
 cursor_type = 12
@@ -80,6 +81,16 @@ margin_bottom = 646.0
 mouse_default_cursor_shape = 13
 script = ExtResource( 10 )
 cursor_type = 12
+
+[node name="WalkHotspot" type="TextureButton" parent="."]
+margin_left = 600.0
+margin_top = 1460.0
+margin_right = 1300.0
+margin_bottom = 1976.0
+mouse_default_cursor_shape = 3
+script = ExtResource( 12 )
+target_scene = "res://scenes/level_medium/level_medium.tscn"
+target_view = "back"
 
 [connection signal="activate" from="ResearchHotspot" to="." method="_on_ResearchHotspot_activate"]
 [connection signal="activate" from="NatoMessageHotspot" to="." method="_on_NatoMessageHotspot_activate"]

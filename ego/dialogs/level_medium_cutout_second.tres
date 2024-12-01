@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://addons/parrot/resources/dialog_resource.gd" type="Script" id=1]
+[ext_resource path="res://characters/player.tres" type="Resource" id=2]
+[ext_resource path="res://addons/parrot/resources/dialog_line_resource.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+character = ExtResource( 2 )
+text = "Egy lyukas papír..."
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 3 )
+character = ExtResource( 2 )
+text = "Mi lenne ha kombinálnám a kutatómunka leírásával..."
+
+[resource]
+script = ExtResource( 1 )
+lines = [ SubResource( 1 ), SubResource( 2 ) ]

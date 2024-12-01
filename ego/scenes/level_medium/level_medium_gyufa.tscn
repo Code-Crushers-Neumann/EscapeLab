@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/level_medium/level_medium_right_close.png" type="Texture" id=1]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=2]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=3]
+[ext_resource path="res://scenes/level_medium/level_medium_gyufa.gd" type="Script" id=4]
+
+[node name="level_medium_gyufa" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="WalkHotspot" type="TextureButton" parent="."]
+margin_left = 3.0
+margin_top = 849.0
+margin_right = 1908.0
+margin_bottom = 1077.0
+mouse_default_cursor_shape = 6
+script = ExtResource( 2 )
+cursor_type = 2
+target_scene = "res://scenes/level_medium/level_medium.tscn"
+target_view = "right"
+
+[node name="Hotspot" type="TextureButton" parent="."]
+margin_left = 1217.0
+margin_top = 576.0
+margin_right = 1616.0
+margin_bottom = 786.0
+mouse_default_cursor_shape = 13
+script = ExtResource( 3 )
+cursor_type = 12
+
+[connection signal="activate" from="Hotspot" to="." method="_on_Hotspot_activate"]

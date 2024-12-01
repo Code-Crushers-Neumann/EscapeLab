@@ -1,7 +1,70 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://addons/egoventure/nodes/four_side_room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/level_medium/level_medium_back.png" type="Texture" id=2]
+[ext_resource path="res://images/level_medium/level_medium_right.png" type="Texture" id=3]
+[ext_resource path="res://images/level_medium/level_medium_left.png" type="Texture" id=4]
+[ext_resource path="res://images/level_medium/level_medium_front.png" type="Texture" id=5]
+[ext_resource path="res://images/items/level_medium/cutout_normal.png" type="Texture" id=6]
+[ext_resource path="res://images/items/level_medium/natomessage_normal.png" type="Texture" id=7]
+[ext_resource path="res://images/items/level_medium/paper_normal.png" type="Texture" id=8]
+[ext_resource path="res://images/items/level_medium/natobook_normal.png" type="Texture" id=9]
+[ext_resource path="res://scenes/level_medium/level_medium.gd" type="Script" id=10]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=11]
 
 [node name="level_medium" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="Room" parent="." instance=ExtResource( 1 )]
+front_texture = ExtResource( 5 )
+right_texture = ExtResource( 3 )
+back_texture = ExtResource( 2 )
+left_texture = ExtResource( 4 )
+
+[node name="Research" type="Sprite" parent="."]
+position = Vector2( 1092, -481 )
+scale = Vector2( 0.773438, 0.773438 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="NatoMessage" type="Sprite" parent="."]
+position = Vector2( 1123, -456 )
+scale = Vector2( 0.773438, 0.773438 )
+z_index = 1
+texture = ExtResource( 7 )
+centered = false
+
+[node name="NatoBook" type="Sprite" parent="."]
+position = Vector2( 623, -451 )
+scale = Vector2( 1.0625, 1.0625 )
+z_index = 1
+texture = ExtResource( 9 )
+centered = false
+
+[node name="Cutout" type="Sprite" parent="."]
+position = Vector2( 684, -470 )
+scale = Vector2( 0.851563, 0.851563 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="WalkHotspot" type="TextureButton" parent="."]
+margin_left = 588.0
+margin_top = -687.0
+margin_right = 1288.0
+margin_bottom = -199.0
+mouse_default_cursor_shape = 3
+script = ExtResource( 11 )
+target_scene = "res://scenes/level_medium/level_medium2.tscn"
+target_view = "front"
+
+[node name="WalkHotspot2" type="TextureButton" parent="."]
+visible = false
+margin_left = 2263.0
+margin_top = 400.0
+margin_right = 3300.0
+margin_bottom = 914.0
+mouse_default_cursor_shape = 16
+disabled = true
+script = ExtResource( 11 )
+cursor_type = 8
+target_scene = "res://scenes/level_medium/level_medium_gyufa.tscn"

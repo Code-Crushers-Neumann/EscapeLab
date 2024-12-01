@@ -19,6 +19,7 @@ export(bool) var easy_done = false
 export(bool) var easy_flag = false
 export(bool) var easy_has_key = false
 export(bool) var medium_can_labtorlo = false
+export(bool) var medium_can_gyufa = false
 export(bool) var medium_has_mainmessage1 = false
 export(bool) var medium_has_mainmessage2 = false
 export(bool) var medium_has_periodic = false
