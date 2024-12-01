@@ -8,8 +8,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	if((EgoVenture.state as GameState).medium_has_periodic):
+		get_node("Hotspot").visible = false
+		get_node("Hotspot").disabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -19,5 +20,6 @@ func _ready():
 func _on_Hotspot_activate():
 	get_node("Hotspot").visible = false
 	get_node("Hotspot").disabled = true
+	(EgoVenture.state as GameState).medium_has_periodic = true
 	Inventory.add_item(preload("res://inventory/level_medium_periodic.tres"))
 	Parrot.play(preload("res://dialogs/level_medium_periodic_pickup.tres"))
