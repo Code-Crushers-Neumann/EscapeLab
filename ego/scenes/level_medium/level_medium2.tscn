@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://addons/egoventure/nodes/four_side_room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/level_medium/level_medium2_back.png" type="Texture" id=2]
+[ext_resource path="res://images/level_medium/level_medium2_left.png" type="Texture" id=3]
+[ext_resource path="res://images/level_medium/level_medium2_front.png" type="Texture" id=4]
+[ext_resource path="res://images/level_medium/level_medium2_right.png" type="Texture" id=5]
+[ext_resource path="res://images/items/level_medium/paper_normal.png" type="Texture" id=6]
+[ext_resource path="res://images/items/level_medium/natomessage_normal.png" type="Texture" id=7]
+[ext_resource path="res://images/items/level_medium/natobook_normal.png" type="Texture" id=8]
+[ext_resource path="res://images/items/level_medium/cutout_normal.png" type="Texture" id=9]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=10]
+[ext_resource path="res://scenes/level_medium/level_medium2.gd" type="Script" id=11]
+
+[node name="level_medium2" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="Room" parent="." instance=ExtResource( 1 )]
+front_texture = ExtResource( 4 )
+right_texture = ExtResource( 5 )
+back_texture = ExtResource( 2 )
+left_texture = ExtResource( 3 )
+
+[node name="Research" type="Sprite" parent="."]
+position = Vector2( 2310, 402 )
+scale = Vector2( 2.82031, 2.82031 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="NatoMessage" type="Sprite" parent="."]
+position = Vector2( 2903, 390 )
+scale = Vector2( 2.82, 2.82 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="NatoBook" type="Sprite" parent="."]
+position = Vector2( -1513, 336 )
+scale = Vector2( 2.6875, 2.6875 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Cutout" type="Sprite" parent="."]
+position = Vector2( -864, 330 )
+scale = Vector2( 2.35938, 2.35938 )
+texture = ExtResource( 9 )
+centered = false
+
+[node name="ResearchHotspot" type="TextureButton" parent="."]
+margin_left = 2335.0
+margin_top = 403.0
+margin_right = 2638.0
+margin_bottom = 752.0
+mouse_default_cursor_shape = 13
+script = ExtResource( 10 )
+cursor_type = 12
+
+[node name="NatoMessageHotspot" type="TextureButton" parent="."]
+margin_left = 2933.0
+margin_top = 407.0
+margin_right = 3236.0
+margin_bottom = 723.0
+mouse_default_cursor_shape = 13
+script = ExtResource( 10 )
+cursor_type = 12
+
+[node name="CutoutHotspot" type="TextureButton" parent="."]
+margin_left = -843.0
+margin_top = 331.0
+margin_right = -578.0
+margin_bottom = 626.0
+mouse_default_cursor_shape = 13
+script = ExtResource( 10 )
+cursor_type = 12
+
+[node name="NatoBookHotspot" type="TextureButton" parent="."]
+margin_left = -1479.0
+margin_top = 335.0
+margin_right = -1201.0
+margin_bottom = 646.0
+mouse_default_cursor_shape = 13
+script = ExtResource( 10 )
+cursor_type = 12
+
+[connection signal="activate" from="ResearchHotspot" to="." method="_on_ResearchHotspot_activate"]
+[connection signal="activate" from="NatoMessageHotspot" to="." method="_on_NatoMessageHotspot_activate"]
+[connection signal="activate" from="CutoutHotspot" to="." method="_on_CutoutHotspot_activate"]
+[connection signal="activate" from="NatoBookHotspot" to="." method="_on_NatoBookHotspot_activate"]

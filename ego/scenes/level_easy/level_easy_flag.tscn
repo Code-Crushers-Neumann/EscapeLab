@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://images/level_easy/level_easy_flag_close.png" type="Texture" id=1]
 [ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=2]
 [ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=3]
+[ext_resource path="res://scenes/level_easy/level_easy_flag.gd" type="Script" id=4]
 
 [node name="level_easy_flag" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -29,3 +31,5 @@ margin_bottom = 834.0
 mouse_default_cursor_shape = 13
 script = ExtResource( 3 )
 cursor_type = 12
+
+[connection signal="activate" from="Hotspot" to="." method="_on_Hotspot_activate"]

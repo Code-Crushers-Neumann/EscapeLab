@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=1]
 [ext_resource path="res://images/level_easy/level_easy_door_close.png" type="Texture" id=2]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/trigger_hotspot.gd" type="Script" id=3]
+[ext_resource path="res://inventory/level_easy_key.tres" type="Resource" id=4]
+[ext_resource path="res://scenes/level_easy/level_easy_door.gd" type="Script" id=5]
 
 [node name="level_easy_door" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
@@ -18,3 +22,16 @@ script = ExtResource( 1 )
 cursor_type = 2
 target_scene = "res://scenes/level_easy/level_easy.tscn"
 target_view = "back"
+
+[node name="TriggerHotspot" type="TextureButton" parent="."]
+margin_left = 761.0
+margin_top = 312.0
+margin_right = 1161.0
+margin_bottom = 771.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+script = ExtResource( 3 )
+valid_inventory_items = [ ExtResource( 4 ) ]
+
+[connection signal="item_used" from="TriggerHotspot" to="." method="_on_TriggerHotspot_item_used"]
+[connection signal="pressed" from="TriggerHotspot" to="." method="_on_TriggerHotspot_pressed"]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://addons/egoventure/resources/inventory_item.gd" type="Script" id=1]
+[ext_resource path="res://images/items/level_medium/natobook_normal.png" type="Texture" id=2]
+[ext_resource path="res://images/items/level_medium/natobook_active.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+title = "Nato kód könyv"
+description = "Egy kód könyv"
+image_normal = ExtResource( 2 )
+image_active = ExtResource( 3 )
+combineable_with = [  ]
+detail_scene = ""
+detail_show_mouse = false
+grabbable = true
