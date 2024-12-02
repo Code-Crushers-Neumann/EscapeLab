@@ -25,8 +25,13 @@ func _ready():
 		get_node("NatoBookHotspot").visible = false
 		get_node("NatoBookHotspot").disabled = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if((EgoVenture.state as GameState).medium_can_labtorlo && !(EgoVenture.state as GameState).medium_has_key):
+		get_node("Hotspot").visible = true
+		get_node("Hotspot").disabled = false
+	if((EgoVenture.state as GameState).medium_has_key):
+		get_node("Hotspot").visible = false
+		get_node("Hotspot").disabled = true
 
 
 func _on_ResearchHotspot_activate():
@@ -75,3 +80,21 @@ func _on_NatoBookHotspot_activate():
 		Parrot.play(preload("res://dialogs/level_medium_natobook_second.tres"))
 	else:
 		Parrot.play(preload("res://dialogs/level_medium_natobook_first.tres"))
+
+
+func _on_Hotspot_activate():
+	Inventory.add_item(preload("res://inventory/level_medium_key.tres"))
+	Parrot.play(preload("res://dialogs/level_medium_key_pickup.tres"))
+
+
+func _on_TriggerHotspot_item_used(item):
+	if(item.title == "MediumKey" && (EgoVenture.state as GameState).medium_door_unlocked == false):
+		(EgoVenture.state as GameState).medium_door_unlocked = true
+		Inventory.release_item()
+		EgoVenture.change_scene("res://scenes/level_medium/success.tscn")
+
+
+func _on_TriggerHotspot_pressed():
+	yield(get_tree().create_timer(0.2), "timeout")
+	if(!(EgoVenture.state as GameState).medium_door_unlocked):
+		Parrot.play(preload("res://dialogs/no_key.tres"))
