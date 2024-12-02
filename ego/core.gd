@@ -53,19 +53,42 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 	match item1.title:
 		"Nato kód könyv":
 			if item2.title == "Kódolt papír":
-#				Inventory.remove_item(preload("res://inventory/level_easy_coded_message.tres"))
-#				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
-#				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
-#				(EgoVenture.state as GameState).easy_flag = true
-				pass
+				Inventory.remove_item(preload("res://inventory/level_medium_natobook.tres"))
+				Inventory.remove_item(preload("res://inventory/level_medium_natomessage.tres"))
+				Inventory.add_item(preload("res://inventory/level_medium_mainmessage2.tres"))
+				if((EgoVenture.state as GameState).medium_has_mainmessage1):
+					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_second.tres"))
+				else:
+					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_first.tres"))
+				(EgoVenture.state as GameState).medium_has_mainmessage2 = true
 	match item1.title:
 		"Kódolt papír":
 			if item2.title == "Nato kód könyv":
-#				Inventory.remove_item(preload("res://inventory/level_easy_coded_message.tres"))
-#				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
-#				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
-#				(EgoVenture.state as GameState).easy_flag = true
-				pass
+				Inventory.remove_item(preload("res://inventory/level_medium_natobook.tres"))
+				Inventory.remove_item(preload("res://inventory/level_medium_natomessage.tres"))
+				Inventory.add_item(preload("res://inventory/level_medium_mainmessage2.tres"))
+				if((EgoVenture.state as GameState).medium_has_mainmessage1):
+					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_second.tres"))
+				else:
+					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_first.tres"))
+				(EgoVenture.state as GameState).medium_has_mainmessage2 = true
+	
+	match item1.title:
+		"MainMessage1":
+			if item2.title == "MainMessage2":
+				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage1.tres"))
+				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage2.tres"))
+				Parrot.play(preload("res://dialogs/level_medium_labtorlo_unlocked.tres"))
+				(EgoVenture.state as GameState).medium_can_labtorlo = true
+	
+	match item1.title:
+		"MainMessage2":
+			if item2.title == "MainMessage1":
+				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage1.tres"))
+				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage2.tres"))
+				Parrot.play(preload("res://dialogs/level_medium_labtorlo_unlocked.tres"))
+				(EgoVenture.state as GameState).medium_can_labtorlo = true
+
 
 
 # Triggered when a new game is started.
