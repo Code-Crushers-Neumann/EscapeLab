@@ -11,4 +11,4 @@ text = "A kulcs komolyan, a lábtörlő alatt volt. Nyissuk ki az ajtót és men
 
 [resource]
 script = ExtResource( 1 )
-lines = [ SubResource( 1 ), null ]
+lines = [ SubResource( 1 ) ]

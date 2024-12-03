@@ -83,6 +83,8 @@ func _on_NatoBookHotspot_activate():
 
 
 func _on_Hotspot_activate():
+	get_node("Hotspot").visible = false
+	get_node("Hotspot").disabled = true
 	Inventory.add_item(preload("res://inventory/level_medium_key.tres"))
 	Parrot.play(preload("res://dialogs/level_medium_key_pickup.tres"))
 

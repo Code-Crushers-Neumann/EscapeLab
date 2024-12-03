@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Inventory.disable()
 	yield(get_tree().create_timer(2), "timeout")
 	Parrot.play(preload("res://dialogs/intro.tres"))
 	Parrot.skip_enabled = false
