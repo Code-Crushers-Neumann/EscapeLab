@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=37 format=2]
+[gd_resource type="Resource" load_steps=38 format=2]
 
 [ext_resource path="res://addons/egoventure/resources/game_configuration.gd" type="Script" id=1]
 [ext_resource path="res://images/mouse/forward.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://images/misc/arrow_previous.png" type="Texture" id=16]
 [ext_resource path="res://images/misc/menu_icon.png" type="Texture" id=17]
 [ext_resource path="res://images/misc/arrow_next.png" type="Texture" id=18]
+[ext_resource path="res://images/menu/Dia3.PNG" type="Texture" id=19]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 15 )
@@ -136,6 +137,7 @@ inventory_texture_menu = ExtResource( 17 )
 inventory_texture_reveal = ExtResource( 13 )
 inventory_texture_left_arrow = ExtResource( 18 )
 inventory_texture_right_arrow = ExtResource( 16 )
+menu_options_background = ExtResource( 19 )
 menu_options_locale_button_modulate = Color( 1, 1, 1, 0.2 )
 menu_options_locale_button_modulate_selected = Color( 1, 1, 1, 1 )
 menu_options_hide_language_selection = false

@@ -39,9 +39,10 @@ margin_left = 2549.0
 margin_top = 234.0
 margin_right = 2677.0
 margin_bottom = 362.0
-mouse_default_cursor_shape = 3
+mouse_default_cursor_shape = 13
 texture_normal = ExtResource( 8 )
 script = ExtResource( 7 )
+cursor_type = 12
 
 [node name="ajto" type="TextureButton" parent="."]
 unique_name_in_owner = true

@@ -25,5 +25,12 @@ margin_right = 990.0
 margin_bottom = 759.0
 text = "1."
 
+[node name="Button3" type="Button" parent="."]
+margin_left = 1215.0
+margin_top = 673.0
+margin_right = 1424.0
+margin_bottom = 802.0
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]

@@ -24,3 +24,7 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	EgoVenture.change_scene("res://scenes/level_easy/level_easy.tscn")
+
+
+func _on_Button3_pressed():
+	EgoVenture.change_scene("res://scenes/level_medium/level_medium.tscn")

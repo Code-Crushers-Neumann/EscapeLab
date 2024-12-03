@@ -45,7 +45,12 @@ func _on_Room_view_changed(old_view, new_view):
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == false):
 		Parrot.play(preload("res://dialogs/tutorial_front_no_note.tres"))
 	elif(new_view == "front" && tutorial_seen_door == true && tutorial_has_note == true):
+		Parrot.skip_enabled = false
+		get_node("Room").enable_navigation = false
 		Parrot.play(preload("res://dialogs/tutorial_front_has_note.tres"))
+		yield(get_tree().create_timer(9), "timeout")
+		get_node("Room").enable_navigation = true
+		Parrot.skip_enabled = true
 
 
 func _on_Hotspot_activate():

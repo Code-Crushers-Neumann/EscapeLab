@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource( 1 )
 name = "Máté"
-color = Color( 0.576471, 0.584314, 0.905882, 1 )
+color = Color( 0.811765, 0.815686, 0.964706, 1 )
