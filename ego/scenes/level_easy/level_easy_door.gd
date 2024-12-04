@@ -18,6 +18,9 @@ func _ready():
 func _on_TriggerHotspot_item_used(item):
 	if(item.title == "Kulcs" && (EgoVenture.state as GameState).easy_done == false):
 		(EgoVenture.state as GameState).easy_done = true
+		Boombox.play_effect(preload("res://sounds/unlock_door.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/door_open.mp3"))
 		Inventory.release_item()
 		EgoVenture.change_scene("res://scenes/level_easy/success.tscn")
 
@@ -25,4 +28,5 @@ func _on_TriggerHotspot_item_used(item):
 func _on_TriggerHotspot_pressed():
 	yield(get_tree().create_timer(0.2), "timeout")
 	if(!(EgoVenture.state as GameState).easy_done):
+		Boombox.play_effect(preload("res://sounds/door_locked.mp3"))
 		Parrot.play(preload("res://dialogs/no_key.tres"))

@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id=1]
 script = ExtResource( 2 )
 character = ExtResource( 3 )
-text = "Keressünk olyan dolgot ami tartalmazhat kódot."
+text = "Keressünk olyan dolgot, ami tartalmazhat kódot!"
 
 [resource]
 script = ExtResource( 1 )

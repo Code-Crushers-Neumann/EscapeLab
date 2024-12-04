@@ -52,8 +52,8 @@ __meta__ = {
 [node name="InventoryPanel" type="HBoxContainer" parent="Canvas/InventoryAnchor/Panel"]
 margin_left = 7.0
 margin_top = 7.0
-margin_right = 2553.0
-margin_bottom = 135.0
+margin_right = 1913.0
+margin_bottom = 7.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -61,8 +61,6 @@ __meta__ = {
 }
 
 [node name="Menu" type="TextureButton" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
-margin_top = 64.0
-margin_bottom = 64.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 button_mask = 3
@@ -73,9 +71,7 @@ __meta__ = {
 
 [node name="Notepad" type="TextureButton" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
 margin_left = 4.0
-margin_top = 64.0
 margin_right = 4.0
-margin_bottom = 64.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 button_mask = 3
@@ -87,35 +83,31 @@ __meta__ = {
 [node name="ArrowLeft" type="TextureButton" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
 margin_left = 8.0
 margin_right = 8.0
-margin_bottom = 128.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
 margin_left = 12.0
-margin_right = 2538.0
-margin_bottom = 128.0
+margin_right = 1898.0
 size_flags_horizontal = 3
 scroll_vertical_enabled = false
 
 [node name="Inventory" type="HBoxContainer" parent="Canvas/InventoryAnchor/Panel/InventoryPanel/ScrollContainer"]
-margin_right = 2526.0
+margin_right = 1886.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
 [node name="ArrowRight" type="TextureButton" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
-margin_left = 2542.0
-margin_right = 2542.0
-margin_bottom = 128.0
+margin_left = 1902.0
+margin_right = 1902.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Reveal" type="TextureButton" parent="Canvas/InventoryAnchor/Panel/InventoryPanel"]
-margin_left = 2546.0
-margin_right = 2546.0
-margin_bottom = 128.0
+margin_left = 1906.0
+margin_right = 1906.0
 stretch_mode = 3
 
 [node name="Animations" type="AnimationPlayer" parent="."]

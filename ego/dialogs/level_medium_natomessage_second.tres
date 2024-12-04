@@ -12,7 +12,7 @@ text = "Egy kódolt üzenet, \"Lima\", \"Bravo\"..."
 [sub_resource type="Resource" id=2]
 script = ExtResource( 3 )
 character = ExtResource( 2 )
-text = "NATO kód lenne ez vajon? Le kéne valahogy fordítani..."
+text = "NATO kód lenne ez vajon? Le kellene valahogy fordítani..."
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 3 )

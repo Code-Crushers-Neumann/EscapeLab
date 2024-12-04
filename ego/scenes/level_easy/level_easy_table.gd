@@ -21,6 +21,7 @@ func _ready():
 
 func _on_Hotspot_activate():
 	(EgoVenture.state as GameState).easy_has_coded_message = true
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	if((EgoVenture.state as GameState).easy_has_coded_message):
 		get_node("Message").visible = false
 		get_node("Hotspot").visible = false

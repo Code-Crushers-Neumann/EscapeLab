@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/keypad.mp3-e65d798be751289eb0c517fdea5da95c.mp3str"
+
+[deps]
+
+source_file="res://sounds/keypad.mp3"
+dest_files=[ "res://.import/keypad.mp3-e65d798be751289eb0c517fdea5da95c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

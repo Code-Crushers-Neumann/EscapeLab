@@ -29,3 +29,4 @@ export(bool) var medium_has_research = false
 export(bool) var medium_has_cutout = false
 export(bool) var medium_has_key = false
 export(bool) var medium_door_unlocked = false
+export(bool) var medium_done = false

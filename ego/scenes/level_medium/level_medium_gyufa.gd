@@ -18,6 +18,7 @@ func _ready():
 
 
 func _on_Hotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("Hotspot").visible = false
 	get_node("Hotspot").disabled = true
 	(EgoVenture.state as GameState).medium_has_periodic = true

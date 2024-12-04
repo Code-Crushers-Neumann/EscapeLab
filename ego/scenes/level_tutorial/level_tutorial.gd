@@ -54,16 +54,27 @@ func _on_Room_view_changed(old_view, new_view):
 
 
 func _on_Hotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	Inventory.add_item(preload("res://inventory/tutorial_note.tres"))
 	tutorial_has_note = true
 	(EgoVenture.state as GameState).tutorial_has_note = true
-	get_node("%Note").queue_free()
+	get_node("Note").visible = false
+	get_node("Note").disabled = true
 
 
 func _on_TriggerHotspot_item_used(item):
 	if(item.title == "note" && tutorial_unlocked_door == false):
 		tutorial_unlocked_door = true
 		get_node("ajto").queue_free()
+		Boombox.play_effect(preload("res://sounds/keypad.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/keypad.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/keypad.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/keypad.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/keypad_confirm.mp3"))
 		get_node("opened").visible = true
 		get_node("WalkHotspot").visible = true
 		get_node("WalkHotspot").disabled = false
@@ -73,6 +84,7 @@ func _on_TriggerHotspot_item_used(item):
 func _on_TriggerHotspot_pressed():
 	yield(get_tree().create_timer(0.2), "timeout")
 	if(!tutorial_unlocked_door):
+		Boombox.play_effect(preload("res://sounds/door_error.mp3"))
 		Parrot.play(preload("res://dialogs/no_code.tres"))
 
 

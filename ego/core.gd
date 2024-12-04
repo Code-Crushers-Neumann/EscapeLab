@@ -27,6 +27,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
 				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
 				(EgoVenture.state as GameState).easy_flag = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	match item1.title:
 		"Kódolt Üzenet":
 			if item2.title == "Szám":
@@ -34,6 +35,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_easy_number_note.tres"))
 				Parrot.play(preload("res://dialogs/level_easy_items_combined.tres"))
 				(EgoVenture.state as GameState).easy_flag = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	
 	match item1.title:
 		"Lyukas papír":
@@ -42,6 +44,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_medium_cutout.tres"))
 				Parrot.play(preload("res://dialogs/level_medium_combineforgyufa.tres"))
 				(EgoVenture.state as GameState).medium_can_gyufa = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	match item1.title:
 		"Tanulmányi lap":
 			if item2.title == "Lyukas papír":
@@ -49,6 +52,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_medium_cutout.tres"))
 				Parrot.play(preload("res://dialogs/level_medium_combineforgyufa.tres"))
 				(EgoVenture.state as GameState).medium_can_gyufa = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	
 	match item1.title:
 		"Nato kód könyv":
@@ -61,6 +65,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				else:
 					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_first.tres"))
 				(EgoVenture.state as GameState).medium_has_mainmessage2 = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	match item1.title:
 		"Kódolt papír":
 			if item2.title == "Nato kód könyv":
@@ -72,6 +77,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				else:
 					Parrot.play(preload("res://dialogs/level_medium_mainmessage2_first.tres"))
 				(EgoVenture.state as GameState).medium_has_mainmessage2 = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	
 	match item1.title:
 		"MainMessage1":
@@ -80,6 +86,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage2.tres"))
 				Parrot.play(preload("res://dialogs/level_medium_labtorlo_unlocked.tres"))
 				(EgoVenture.state as GameState).medium_can_labtorlo = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 	
 	match item1.title:
 		"MainMessage2":
@@ -88,6 +95,7 @@ func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
 				Inventory.remove_item(preload("res://inventory/level_medium_mainmessage2.tres"))
 				Parrot.play(preload("res://dialogs/level_medium_labtorlo_unlocked.tres"))
 				(EgoVenture.state as GameState).medium_can_labtorlo = true
+				Boombox.play_effect(preload("res://sounds/item_combine.mp3"))
 
 
 

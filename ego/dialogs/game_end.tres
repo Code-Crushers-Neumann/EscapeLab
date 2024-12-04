@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://addons/parrot/resources/dialog_resource.gd" type="Script" id=1]
 [ext_resource path="res://addons/parrot/resources/dialog_line_resource.gd" type="Script" id=2]
@@ -11,6 +11,11 @@ text = "Gratulálok!
 Sikerült kijátszanod eme rövid játékot!
 Köszönjük, hogy játszottál vele!"
 
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+character = ExtResource( 3 )
+text = "Hallgathatod a győzelem zenéjét. Amikor befejezted vagy nem akarod tovább hallgatni, kattins bárhova"
+
 [resource]
 script = ExtResource( 1 )
-lines = [ SubResource( 1 ) ]
+lines = [ SubResource( 1 ), SubResource( 2 ) ]

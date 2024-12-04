@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/keypad_confirm.mp3-e3bb0fec09ee1dd2eda77f1e1dc5b304.mp3str"
+
+[deps]
+
+source_file="res://sounds/keypad_confirm.mp3"
+dest_files=[ "res://.import/keypad_confirm.mp3-e3bb0fec09ee1dd2eda77f1e1dc5b304.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

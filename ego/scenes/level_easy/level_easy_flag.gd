@@ -22,4 +22,5 @@ func _on_Hotspot_activate():
 	get_node("Hotspot").disabled = true
 	(EgoVenture.state as GameState).easy_has_key = true
 	Inventory.add_item(preload("res://inventory/level_easy_key.tres"))
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	Parrot.play(preload("res://dialogs/level_easy_has_key.tres"))

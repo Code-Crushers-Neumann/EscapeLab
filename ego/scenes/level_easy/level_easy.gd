@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Boombox.play_music(preload("res://music/level_easy.mp3"))
 	Inventory.enable()
 	if((EgoVenture.state as GameState).easy_has_coded_message):
 		get_node("Coded_Message").visible = false

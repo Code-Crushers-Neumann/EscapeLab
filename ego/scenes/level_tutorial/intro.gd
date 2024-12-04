@@ -8,6 +8,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	EgoVenture.save_continue()
+	Boombox.play_music(preload("res://music/tutorial_music.mp3"))
 	Inventory.disable()
 	yield(get_tree().create_timer(2), "timeout")
 	Parrot.play(preload("res://dialogs/intro.tres"))

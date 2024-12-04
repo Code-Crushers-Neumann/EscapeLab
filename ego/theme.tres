@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=30 format=2]
+[gd_resource type="Theme" load_steps=31 format=2]
 
 [ext_resource path="res://misc/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -36,14 +36,21 @@ content_margin_right = 10.0
 content_margin_top = 10.0
 content_margin_bottom = 10.0
 
+[sub_resource type="ImageTexture" id=29]
+
 [sub_resource type="ImageTexture" id=9]
 
 [sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxFlat" id=30]
+content_margin_top = 7.0
+content_margin_bottom = 7.0
+bg_color = Color( 0.858824, 0.258824, 0.258824, 1 )
 
-[sub_resource type="StyleBoxTexture" id=12]
-region_rect = Rect2( 0, 0, 485, 69 )
+[sub_resource type="StyleBoxFlat" id=31]
+content_margin_top = 7.0
+content_margin_bottom = 7.0
+bg_color = Color( 0.760784, 0.760784, 0.760784, 1 )
 
 [sub_resource type="DynamicFont" id=13]
 size = 48
@@ -168,11 +175,12 @@ CheckButton/styles/hover_pressed = SubResource( 8 )
 CheckButton/styles/normal = SubResource( 8 )
 CheckButton/styles/pressed = SubResource( 8 )
 HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = SubResource( 29 )
 HSlider/icons/grabber_highlight = null
 HSlider/icons/tick = SubResource( 9 )
 HSlider/styles/grabber_area = SubResource( 10 )
-HSlider/styles/grabber_area_highlight = SubResource( 11 )
-HSlider/styles/slider = SubResource( 12 )
+HSlider/styles/grabber_area_highlight = SubResource( 30 )
+HSlider/styles/slider = SubResource( 31 )
 Label/colors/detail_view_font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color = Color( 0.835294, 0.835294, 0.835294, 1 )
 Label/colors/goals = Color( 1, 0, 0, 1 )

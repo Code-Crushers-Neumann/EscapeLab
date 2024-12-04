@@ -23,6 +23,7 @@ func _on_Hotspot_activate():
 		(EgoVenture.state as GameState).easy_has_number_code = true
 		get_node("Hotspot").disabled = true
 		get_node("Hotspot").visible = false
+		Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 		if((EgoVenture.state as GameState).easy_has_coded_message):
 			Parrot.play(preload("res://dialogs/level_easy_number_pickup_second.tres"))
 			Inventory.add_item(preload("res://inventory/level_easy_number_note.tres"))

@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Boombox.play_music(preload("res://music/level_medium.mp3"))
 	Inventory.enable()
 	if((EgoVenture.state as GameState).medium_has_research):
 		get_node("Research").visible = false
@@ -41,6 +42,7 @@ func _on_TriggerHotspot_item_used(item):
 		Inventory.release_item()
 		Inventory.remove_item(preload("res://inventory/level_medium_periodic.tres"))
 		Inventory.add_item(preload("res://inventory/level_medium_mainmessage1.tres"))
+		Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 		(EgoVenture.state as GameState).medium_has_mainmessage1 = true
 		if(!(EgoVenture.state as GameState).medium_has_mainmessage2):
 			Parrot.play(preload("res://dialogs/level_medium_mainmessage1_first.tres"))

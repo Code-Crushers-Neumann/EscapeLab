@@ -14,13 +14,13 @@ image = ExtResource( 4 )
 [sub_resource type="Resource" id=2]
 script = ExtResource( 3 )
 character = ExtResource( 2 )
-text = "Látom hogy azért jöttél, hogy szoba-tesztelő legyél nálunk."
+text = "Látom, azért jöttél, hogy szoba-tesztelő legyél nálunk."
 image = ExtResource( 4 )
 
 [sub_resource type="Resource" id=3]
 script = ExtResource( 3 )
 character = ExtResource( 2 )
-text = "Először is, teszteljük le a képességeidet. Majd a teszt után eldöntjük, hogy felvegyünk-e téged."
+text = "Először is, teszteljük le a képességeidet! Majd a teszt után eldöntjük, hogy felvegyünk-e téged."
 image = ExtResource( 4 )
 
 [resource]

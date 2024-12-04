@@ -35,6 +35,7 @@ func _process(delta):
 
 
 func _on_ResearchHotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("Research").visible = false
 	get_node("ResearchHotspot").visible = false
 	get_node("ResearchHotspot").disabled = true
@@ -47,6 +48,7 @@ func _on_ResearchHotspot_activate():
 
 
 func _on_NatoMessageHotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("NatoMessage").visible = false
 	get_node("NatoMessageHotspot").visible = false
 	get_node("NatoMessageHotspot").disabled = true
@@ -59,6 +61,7 @@ func _on_NatoMessageHotspot_activate():
 
 
 func _on_CutoutHotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("Cutout").visible = false
 	get_node("CutoutHotspot").visible = false
 	get_node("CutoutHotspot").disabled = true
@@ -71,6 +74,7 @@ func _on_CutoutHotspot_activate():
 
 
 func _on_NatoBookHotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("NatoBook").visible = false
 	get_node("NatoBookHotspot").visible = false
 	get_node("NatoBookHotspot").disabled = true
@@ -83,6 +87,7 @@ func _on_NatoBookHotspot_activate():
 
 
 func _on_Hotspot_activate():
+	Boombox.play_effect(preload("res://sounds/item_pickup.mp3"))
 	get_node("Hotspot").visible = false
 	get_node("Hotspot").disabled = true
 	Inventory.add_item(preload("res://inventory/level_medium_key.tres"))
@@ -92,6 +97,9 @@ func _on_Hotspot_activate():
 func _on_TriggerHotspot_item_used(item):
 	if(item.title == "MediumKey" && (EgoVenture.state as GameState).medium_door_unlocked == false):
 		(EgoVenture.state as GameState).medium_door_unlocked = true
+		Boombox.play_effect(preload("res://sounds/unlock_door.mp3"))
+		yield(Boombox,"effect_finished")
+		Boombox.play_effect(preload("res://sounds/door_open.mp3"))
 		Inventory.release_item()
 		EgoVenture.change_scene("res://scenes/level_medium/success.tscn")
 
@@ -99,4 +107,5 @@ func _on_TriggerHotspot_item_used(item):
 func _on_TriggerHotspot_pressed():
 	yield(get_tree().create_timer(0.2), "timeout")
 	if(!(EgoVenture.state as GameState).medium_door_unlocked):
+		Boombox.play_effect(preload("res://sounds/door_locked.mp3"))
 		Parrot.play(preload("res://dialogs/no_key.tres"))
