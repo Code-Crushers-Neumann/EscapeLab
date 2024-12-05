@@ -76,6 +76,9 @@ margin_bottom = 999.0
 texture_normal = ExtResource( 8 )
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_Button_pressed"]
+[connection signal="activate" from="TextureButton/MapHotspot" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="TextureButton2" to="." method="_on_Button2_pressed"]
+[connection signal="activate" from="TextureButton2/MapHotspot" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_Button3_pressed"]
+[connection signal="activate" from="TextureButton3/MapHotspot" to="." method="_on_MapHotspot_activate"]
 [connection signal="pressed" from="TextureButton4" to="." method="_on_TextureButton4_pressed"]
