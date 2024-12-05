@@ -9,6 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	EgoVenture.save_continue()
+	Inventory.disable()
 	if(Boombox.is_music_playing()):
 		if(Boombox.get_music().get_length() != preload("res://music/main_menu.mp3").get_length()):
 			Boombox.play_music(preload("res://music/main_menu.mp3"))

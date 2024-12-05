@@ -8,13 +8,19 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Parrot.connect("dialog_finished", self, "_on_dialog_finished")
 	Boombox.play_music(preload("res://music/victory.mp3"))
 	Inventory.remove_item(preload("res://inventory/level_medium_key.tres"))
 	Inventory.disable()
+	get_node("Hotspot").disabled = true
 	yield(get_tree().create_timer(0.2), "timeout")
 	Parrot.skip_enabled = false
 	Parrot.play(preload("res://dialogs/game_end.tres"))
-	yield(get_tree().create_timer(5), "timeout")
+
+
+# Define the signal handler
+func _on_dialog_finished():
+	get_node("Hotspot").disabled = false
 	Parrot.skip_enabled = true
 	(EgoVenture.state as GameState).medium_done = true
 	
